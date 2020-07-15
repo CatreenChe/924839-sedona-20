@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ekaterina Chekulaeva](https://up.htmlacademy.ru/adaptive/20/user/924839).
-* Наставник: `Неизвестно`.
+* Наставник: [Liza Pak] (https://htmlacademy.ru/profile/lizzy).
 
 ---
 
