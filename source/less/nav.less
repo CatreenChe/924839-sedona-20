@@ -1,0 +1,56 @@
+@import "colors.less";
+
+.nav {
+    font-size: 14px;
+    display: flex;
+
+  }
+
+  .nav__toggle {
+    background-image: url(../img/icon-menu.svg);
+    border-width: 0;
+    min-width: 22px;
+    min-height: 22.9px;
+  // Как можно обойтись без border-width, min-width, min-height? В icon-menu.svg ширина и высота прописаны, но по факту иконка получается меньше.
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+      // Как избавиться от рамки?
+    }
+  }
+
+  .nav__list {
+    list-style: none;
+  }
+
+  .nav__link {
+    color: @base-color;
+    text-decoration: none;
+
+
+    &:hover {
+      color: #81B3D2;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .nav__link--active {
+    color: #766357;
+
+    &:hover {
+      color: #604E43;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
