@@ -19,16 +19,16 @@
       </button>
       <ul class="nav__list">
         <li class="nav__item">
-          <a href="info.html">Информация</a>
+          <a class="nav__link nav__link--active" href="index.html">Главная</a>
         </li>
         <li class="nav__item">
-          <a href="photo.html">Фото и видео</a>
+          <a class="nav__link" href="photo.html">Фото и видео</a>
         </li>
         <li class="nav__item">
-          <a href="state-map.html">Карта штата</a>
+          <a class="nav__link" href="form.html">Форма отзыва</a>
         </li>
         <li class="nav__item">
-          <a href="hotels.html">Гостиницы</a>
+          <a class="nav__link" href="https://htmlacademy.ru">html academy</a>
         </li>
       </ul>
     </nav>
@@ -68,7 +68,7 @@
         </li>
 
         <li class="advantages__item">
-          <div class="advantages__card advantages__card--highlighted">
+          <div class="advantages__card">
             <h3 class="advantages__title">Там есть мост дьявола</h3>
             <b class="advantages__number">№2</b>
             <p class="advantages__description"> Да, по нему можно пройти: если вы осмелитесь, конечно</p>
@@ -112,7 +112,7 @@
 
   <footer class="page-footer">
     <div class="page-footer__hashtag">
-      <a href="https://www.instagram.com/explore/tags/visitsedona/">#visitsedona</a>
+      <a class="page-footer__insta" href="#">#visitsedona</a>
     </div>
     <div class="page-footer__social social">
       <ul class="social__list">
@@ -130,8 +130,9 @@
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
       <a class="copyright__link" href="https://htmlacademy.ru">
-        <img src="img/htmlacademy.svg" alt="Логотип HTML Academy">
+        <img class="copyright__logo" src="img/htmlacademy.svg" alt="Логотип HTML Academy">
       </a>
+      <!-- через класс copyright__logo  тоже не получилось поменять цвет при ховере-->
     </div>
   </footer>
 </body>
