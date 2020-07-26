@@ -1,14 +1,25 @@
 @import "colors.less";
+
+@import "page-header";
+@import "nav";
+
+@import "page-main";
+@import "advantages";
+
+@import "page-gallery";
+@import "photocard";
+
 @import "page-footer.less";
 @import "social.less";
 @import "copyright.less";
+
 
 
 .page {
   font-family: "PTSans", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 21px;
   // /18px для мобильной версии/
   line-height: 26px;
   color: @base-color;
@@ -18,3 +29,6 @@
   min-width: 320px;
 }
 
+.visually-hidden {
+  font-size: 0;
+}
