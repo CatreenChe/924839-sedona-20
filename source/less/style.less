@@ -1,27 +1,30 @@
-@import "colors.less";
+@import "variables";
 
 @import "page-header";
 @import "nav";
 
-@import "page-main";
+@import "page";
 @import "advantages";
 
 @import "page-gallery";
 @import "photocard";
 
-@import "page-footer.less";
-@import "social.less";
-@import "copyright.less";
+@import "page-footer";
+@import "social";
+@import "copyright";
 
-
-.page {
-  font-family: "PTSans", Arial, sans-serif;
+@font-face {
+  font-family: @deafult-font;
   font-style: normal;
   font-weight: bold;
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
+}
+
+.page {
   font-size: 21px;
   line-height: 26px;
   // /18px для мобильной версии. Размер 18 px пока прописала в каждом блоке./
-  line-height: 26px;
   color: @base-color;
   background-color: @base-background;
   text-transform: uppercase;
