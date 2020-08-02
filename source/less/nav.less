@@ -1,10 +1,17 @@
 .nav {
+  display: flex;
   border: 1px solid red;
   font-size: 14px;
+  width: 100%;
+}
+
+@media (min-width: @desktop-width) {
+  height: 97px;
 }
 
 .nav__toggle {
   background-color: @color-main-button;
+  display: none;
 
   &:hover {
     opacity: 0.6;
@@ -18,10 +25,18 @@
 .nav__list {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between; для планшета и компа
+  align-items: center;
   list-style: none;
+  padding: 0;
+  margin: 0;
   border: 1px solid indigo;
   font-weight: @font-weight-secondary;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 .nav__link {

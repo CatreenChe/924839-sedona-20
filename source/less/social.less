@@ -1,18 +1,22 @@
 .social {
-  border: 1px dotted darkorchid;
+  border: 2px dotted darkorchid;
   display: flex;
 }
 
 .social__list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   min-width: 156px;
   list-style: none;
-  padding-left: 0;
+  margin: 0 auto;
+  border: 2px solid palevioletred;
+  padding: 0;
 }
 
 .social__item {
   background-color: @background-main;
+  display: flex;
+  justify-content: space-between;
 
   &:hover {
     background-color: @background-main-hover;
@@ -25,8 +29,10 @@
   background-repeat: no-repeat;
   width: 46px;
   height: 48px;
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  position: relative;
+  left: 15px;
+  top: 15px;
 
   &:active {
     opacity: 0.3;

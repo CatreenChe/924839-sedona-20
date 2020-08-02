@@ -1,10 +1,14 @@
 .advantages {
   border: 2px solid red;
+
+  margin: 0 auto;
 }
 
 .advantages__item {
   border: 2px solid green;
   display: flex;
+  flex-direction: column;
+  max-width: @mobile-width-only;
 }
 
 .advantages__nested-list,
@@ -23,6 +27,14 @@
 .advantages__list,
 .advantages__nested-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.advantages__nested-list {
+  margin: 0 20px;
+  padding: 0;
 }
 
 .advantages__title {
@@ -31,8 +43,10 @@
 }
 
 .advantages__card {
+  display: flex;
+  flex-direction: column;
   background-color: @background-main-pale;
-  padding: 26px;
+  text-align: center;
 }
 
 .advantages__card--highlighted {
@@ -42,16 +56,20 @@
 
 .advantages__nested-item {
   background-repeat: no-repeat;
+  padding: 0 70px;
 }
 
 .advantages__nested-item--living {
+  background-color: lightgreen;
   background-image: url("../img/icon-house.svg");
 }
 
 .advantages__nested-item--souvenirs {
+  background-color: yellow;
   background-image: url("../img/icon-gift.svg");
 }
 
 .advantages__nested-item--food {
+  background-color: yellowgreen;
   background-image: url("../img/icon-burger.svg");
 }
