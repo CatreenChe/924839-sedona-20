@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Сайт туристического городка Cедона</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -13,21 +15,29 @@
     </a>
     <nav class="nav">
       <button class="nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню
-        </span>
+        <span class="visually-hidden">Открыть меню</span>
+        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="23.000px" height="22.000px" viewBox="0 0 23.000 22.000"
+          enable-background="new 0 0 23.000 22.000" xml:space="preserve">
+          <g>
+            <rect width="23.000" height="4.0" fill="#81B3D2" />
+            <rect y="9.009" width="23.000" height="4.0" fill="#81B3D2" />
+            <rect y="18.018" width="23.000" height="4.0" fill="#81B3D2" />
+          </g>
+        </svg>
       </button>
       <ul class="nav__list">
         <li class="nav__item">
-          <a href="info.html">Информация</a>
+          <a class="nav__link nav__link--active" href="index.html">Главная</a>
         </li>
         <li class="nav__item">
-          <a href="photo.html">Фото и видео</a>
+          <a class="nav__link" href="photo.html">Фото и видео</a>
         </li>
         <li class="nav__item">
-          <a href="state-map.html">Карта штата</a>
+          <a class="nav__link" href="form.html">Форма отзыва</a>
         </li>
         <li class="nav__item">
-          <a href="hotels.html">Гостиницы</a>
+          <a class="nav__link" href="https://htmlacademy.ru">html academy</a>
         </li>
       </ul>
     </nav>
@@ -43,10 +53,10 @@
         <li class="advantages__item">
           <div class="advantages__card advantages__card--highlighted">
             <h3 class="advantages__title">Настоящий городок</h3>
-            <b class="advantages__number">№1</b>
+            <b class="advantages__number">&mdash; №1 &mdash;</b>
             <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <img src="https://via.placeholder.com/150x150" alt="Фото города">
+          <img src="./img/main-city-mobile@1x.jpg" alt="Фото города">
           <ul class="advantages__nested-list">
             <li class="advantages__nested-item advantages__nested-item--living">
               <h3 class="advantages__title">Жилье</h3>
@@ -69,16 +79,16 @@
         <li class="advantages__item">
           <div class="advantages__card advantages__card--highlighted">
             <h3 class="advantages__title">Там есть мост дьявола</h3>
-            <b class="advantages__number">№2</b>
+            <b class="advantages__number">&mdash; №2 &mdash;</b>
             <p class="advantages__description"> Да, по нему можно пройти: если вы осмелитесь, конечно</p>
           </div>
-          <img src="https://via.placeholder.com/150x150" alt="Фото каньона">
+          <img src="./img/main-bridge-mobile@1x.jpg" alt="Фото каньона">
         </li>
 
         <li class="advantages__item">
           <div class="advantages__card">
             <h3 class="advantages__title">Небольшая площадь</h3>
-            <b class="advantages__number">№3</b>
+            <b class="advantages__number">&mdash; №3 &mdash;</b>
             <p class="advantages__description">Все интересные места находятся очень близко</p>
           </div>
         </li>
@@ -86,7 +96,7 @@
         <li class="advantages__item">
           <div class="advantages__card">
             <h3 class="advantages__title">Красивая дорога</h3>
-            <b class="advantages__number">№4</b>
+            <b class="advantages__number">&mdash; №4 &mdash;</b>
             <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
           </div>
         </li>
@@ -94,7 +104,7 @@
         <li class="advantages__item">
           <div class="advantages__card">
             <h3 class="advantages__title">Мало туристов</h3>
-            <b class="advantages__number">№5</b>
+            <b class="advantages__number">&mdash; №5 &mdash;</b>
             <p class="advantages__description">Большинство едет в гранд каньон и толпится там</p>
           </div>
         </li>
@@ -111,25 +121,34 @@
 
   <footer class="page-footer">
     <div class="page-footer__hashtag">
-      <a href="https://www.instagram.com/explore/tags/visitsedona/">#visitsedona</a>
+      <a class="page-footer__insta" href="#">#visitsedona</a>
     </div>
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">Твиттер</a>
+          <a class="social__link social__link--twitter" href="#">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">Фейсбук</a>
+          <a class="social__link social__link--facebook" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="#">Ютуб</a>
+          <a class="social__link social__link--youtube" href="#">
+            <span class="visually-hidden">Ютуб</span>
+          </a>
         </li>
       </ul>
     </div>
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
-      <a class="copyright__link" href="https://htmlacademy.ru">
-        <img src="img/htmlacademy.svg" alt="Логотип HTML Academy">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg class="copyright__logo" width="26.9" height="34.1" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg" alt="Логотип HTML Academy">
+          <path
+            d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" />
+        </svg>
       </a>
     </div>
   </footer>

@@ -1,0 +1,17 @@
+.page {
+  font-family: @font-family-main;
+  font-style: @font-style-main;
+  font-weight: @font-weight-main;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+}
+
+// Не очень понятно, что писать сюда, а что относится к global.less.
+// В обоих файлах задаются общие правила ведь Или файл page не обязателен (как не нужен отдельный файл visually-hidden, если его значения прописать в global)?
