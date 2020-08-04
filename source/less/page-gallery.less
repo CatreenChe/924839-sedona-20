@@ -10,8 +10,12 @@
 
 .page-gallery__title,
 .page-gallery__description {
-  font-size: 18px;
-  line-height: 26px;
+  font-size: @font-size-mobile;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    font-size: 30px;
+  }
 }
 
 .page-gallery__list {
