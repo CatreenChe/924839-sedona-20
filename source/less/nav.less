@@ -2,13 +2,25 @@
   display: flex;
   outline: 1px solid black;
   font-size: 14px;
-  line-height: @line-height-main;
-
   width: 100%;
 }
 
-@media (min-width: @desktop-width) {
-  height: 97px;
+.nav__item {
+  @media (max-width: @mobile-width-only) {
+    background-color: @background-main;
+    text-align: center;
+    width: 100%;
+    line-height: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+
+    &:hover {
+      background-color: @background-main-hover;
+    }
+    &:active {
+      background-color: @background-main-active;
+    }
+  }
 }
 
 .nav__toggle {
@@ -41,6 +53,14 @@
   }
 }
 
+.nav__list .nav__link {
+  @media (max-width: @mobile-width-only) {
+    padding-left: 10vh;
+    padding-right: 10vh;
+    // Какое-то другое значение vh
+  }
+}
+
 .nav__link {
   color: @color-main;
   text-decoration: none;
@@ -50,7 +70,16 @@
   }
 
   &:active {
+    color: @color-main;
     opacity: 0.3;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    color: @color-main-button;
+
+    &:hover {
+      color: @color-main-button;
+    }
   }
 }
 
@@ -60,8 +89,18 @@
   &:hover {
     color: @color-nav-active-hover;
   }
-
   &:active {
+    color: @color-nav-active;
     opacity: 0.3;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    color: @color-main-button;
+    &:hover {
+      color: @color-main-button;
+    }
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
