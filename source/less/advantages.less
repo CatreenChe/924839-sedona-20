@@ -1,13 +1,37 @@
 .advantages {
   outline: 1px solid red;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.advantages__items-gray {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
 }
 
 .advantages__item {
   outline: 1px solid green;
   display: flex;
   flex-direction: column;
-  max-width: @mobile-width-only;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.advantages__items-gray .advantages__item {
+  @media (min-width: @tablet-width) {
+    width: 30%;
+  }
 }
 
 .advantages__nested-list,
@@ -15,8 +39,7 @@
   outline: 1px dotted blue;
 }
 
-.advantages__list,
-.advantages__nested-list {
+.advantages__list {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -24,8 +47,15 @@
 }
 
 .advantages__nested-list {
-  margin: 0 20px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
   padding: 0;
+
+  @media (max-width: @mobile-width-only) {
+    flex-direction: column;
+    margin: 0 20px;
+  }
 }
 
 .advantages__card {
@@ -38,24 +68,37 @@
 .advantages__card--highlighted {
   color: @color-main-button;
   background-color: @background-main;
+
+  @media (min-width: @tablet-width) {
+    width: 33%;
+  }
+}
+
+.advantages__card--highlighted img {
+  @media (min-width: @tablet-width) {
+    width: 66%;
+  }
 }
 
 .advantages__nested-item {
+  background-color: lightyellow;
   background-repeat: no-repeat;
-  padding: 0 70px;
+  padding: 0;
+  width: 30%;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+  }
 }
 
 .advantages__nested-item--living {
-  background-color: lightgreen;
   background-image: url("../img/icon-house.svg");
 }
 
 .advantages__nested-item--souvenirs {
-  background-color: lightyellow;
   background-image: url("../img/icon-gift.svg");
 }
 
 .advantages__nested-item--food {
-  background-color: lightpink;
   background-image: url("../img/icon-burger.svg");
 }
