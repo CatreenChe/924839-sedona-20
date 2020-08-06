@@ -1,23 +1,53 @@
 .page-gallery {
   outline: 1px solid red;
-  display: flex;
-  // width: 100%;
-}
-
-.page-gallery__item {
-  outline: 1px solid blue;
-}
-
-.page-gallery__title,
-.page-gallery__description {
-  font-size: @font-size-mobile;
-
-  @media (min-width: @tablet-width) {
-    // width: 768px;
-    font-size: 30px;
-  }
+  width: 100%;
 }
 
 .page-gallery__list {
   list-style: none;
+  padding: 0;
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.page-gallery__item {
+  outline: 2px dotted blue;
+
+  &--big {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+  }
+}
+
+.page-gallery__title {
+  font-size: @font-size-mobile;
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.page-gallery__description {
+  font-size: 14px;
+  // Или все таки 18 и 30?
+}
+
+.page-gallery__wrapper {
+  img {
+    vertical-align: middle; // to remove gap below img, https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image
+    width: 100%;
+  }
 }

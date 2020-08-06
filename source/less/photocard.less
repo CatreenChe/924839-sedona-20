@@ -1,5 +1,17 @@
 .photocard {
   padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.photocard__likes {
+  outline: 1px solid aqua;
+  display: inline-flex;
 }
 
 .photocard__title,
@@ -31,8 +43,29 @@
   height: 22px;
   outline: 0;
   background-color: @color-main-button;
+  border: none;
 
   &:hover {
     opacity: 1;
+  }
+}
+
+// .photocard__img-wrapper {
+//   @media (min-width: @tablet-width) {
+//     // padding-left: 60px;
+//     // padding-right: 60px;
+//     width: 50%;
+//   }
+// }
+
+.photocard__description {
+  @media (min-width: @tablet-width) {
+    background-color: @background-pale-form;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @color-main-button;
+    background-color: @color-main;
+    opacity: 0.3;
   }
 }

@@ -3,11 +3,21 @@
   outline: 1px solid black;
   font-size: 14px;
   width: 100%;
+
+  @media (max-width: @mobile-width-only) {
+    background-color: @background-main;
+    font-size: @font-size-mobile;
+
+    min-height: 223px;
+    // откуда появляется лишняя строчка?
+  }
 }
 
 .nav__item {
+  padding-top: 10px;
+  padding-bottom: 5px;
+
   @media (max-width: @mobile-width-only) {
-    background-color: @background-main;
     text-align: center;
     width: 100%;
     line-height: 40px;
@@ -24,17 +34,47 @@
 }
 
 .nav__toggle {
-  background-color: @color-main-button;
   display: none;
+
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    display: block;
+    width: 23px;
+    height: 22px;
+    cursor: pointer;
+    border: none;
+    background-color: tomato;
+    // background-color: background-color: @color-main-button;
+    // разъезжается с svg
+  }
 
   &:hover {
     opacity: 0.6;
   }
-
   &:active {
     opacity: 0.3;
   }
 }
+
+.nav--closed .nav__toggle::before {
+  @media (max-width: @mobile-width-only) {
+    content: "";
+    position: absolute;
+    top: 37px;
+    left: 20px;
+  }
+}
+
+// .nav--opened .nav__toggle::before {
+//   @media (max-width: @mobile-width-only) {
+//     content: "";
+//     position: absolute;
+//     bottom: 17px;
+//     left: 20px;
+
+// }
 
 .nav__list {
   display: flex;
@@ -49,15 +89,18 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
 }
 
 .nav__list .nav__link {
   @media (max-width: @mobile-width-only) {
-    padding-left: 10vh;
-    padding-right: 10vh;
-    // Какое-то другое значение vh
+    position: relative;
+    display: block;
+    // padding-left: 100vw;
+    // padding-right: 100vw;
+    // Как задать на всю ширину li?
   }
 }
 

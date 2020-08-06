@@ -13,7 +13,7 @@
     <a class="page-header__logo">
       <img src="img/logo-mobile.svg" width="102" height="84" alt="Город Седона">
     </a>
-    <nav class="nav">
+    <nav class="nav nav--closed  nav--opened nav--nojs">
       <button class="nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
         <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,8 +25,19 @@
             <rect y="18.018" width="23.000" height="4.0" fill="#81B3D2" />
           </g>
         </svg>
+        <!-- <span class="visually-hidden">Закрыть меню</span>
+        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199"
+          enable-background="new 0 0 22.199 22.199" xml:space="preserve" fill="white">
+          <polygon
+            points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+        </svg>
+
+      По комменту лектора поняла, что так не надо. Но ведь toggle на мобильной версии д.б.всегда, а крестик - скрываться/открываться по клику-->
+
       </button>
       <ul class="nav__list">
+
         <li class="nav__item">
           <a class="nav__link nav__link--active" href="index.html">Главная</a>
         </li>
@@ -56,7 +67,9 @@
             <b class="advantages__number">&mdash; №1 &mdash;</b>
             <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <img src="./img/main-city-mobile@1x.jpg" alt="Фото города">
+          <div class="advantages__image-wrapper">
+            <img src="./img/main-city-mobile@1x.jpg" alt="Фото города">
+          </div>
           <ul class="advantages__nested-list">
             <li class="advantages__nested-item advantages__nested-item--living">
               <h3 class="advantages__title">Жилье</h3>
@@ -82,7 +95,9 @@
             <b class="advantages__number">&mdash; №2 &mdash;</b>
             <p class="advantages__description"> Да, по нему можно пройти: если вы осмелитесь, конечно</p>
           </div>
-          <img src="./img/main-bridge-mobile@1x.jpg" alt="Фото каньона">
+          <div class="advantages__image-wrapper">
+            <img src="./img/main-bridge-mobile@1x.jpg" alt="Фото каньона">
+          </div>
         </li>
         <div class="advantages__items-gray">
           <li class="advantages__item">

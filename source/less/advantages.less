@@ -97,8 +97,27 @@
 
 .advantages__nested-item--souvenirs {
   background-image: url("../img/icon-gift.svg");
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
 }
 
 .advantages__nested-item--food {
   background-image: url("../img/icon-burger.svg");
+}
+
+.advantages__image-wrapper {
+  width: 66%;
+  background-color: #facefa;
+  background-size: cover;
+
+  img {
+    vertical-align: middle; // to remove gap below img, https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image
+    width: 100%;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+  }
 }
