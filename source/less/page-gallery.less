@@ -35,6 +35,7 @@
 
 .page-gallery__title {
   font-size: @font-size-mobile;
+
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: @line-height-main;
@@ -45,6 +46,14 @@
   font-size: 14px;
   line-height: 24px;
   // Или все таки 18 и 30?
+}
+
+.page-gallery__title,
+.page-gallery__description {
+  @media (max-width: @mobile-width-only) {
+    text-align: center;
+    padding: 0 9px 0 12px;
+  }
 }
 
 .page-gallery__wrapper {
