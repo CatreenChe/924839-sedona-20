@@ -2,11 +2,12 @@
   display: flex;
   outline: 1px solid black;
   font-size: 14px;
+  line-height: @line-height-main;
 
   @media (max-width: @mobile-width-only) {
     background-color: @background-main;
     font-size: @font-size-mobile;
-    line-height: @line-height-main;
+    line-height: 40px;
 
     // min-height: 223px;
   }
@@ -19,7 +20,7 @@
   @media (max-width: @mobile-width-only) {
     text-align: center;
     width: 100%;
-    line-height: 40px;
+
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(1, 1, 1, 0.2);
 
@@ -44,7 +45,7 @@
     height: 22px;
     cursor: pointer;
     border: none;
-    background-color: tomato;
+    // background-color: tomato;
     // background-color: background-color: @color-main-button;
     // разъезжается с svg
   }
