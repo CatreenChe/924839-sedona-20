@@ -11,7 +11,7 @@
 
 .photocard__likes {
   outline: 1px solid aqua;
-  display: inline-flex;
+  display: flex;
 }
 
 .photocard__title,
@@ -61,11 +61,19 @@
 .photocard__description {
   @media (min-width: @tablet-width) {
     background-color: @background-pale-form;
+    padding: 0 20px;
   }
 
   @media (min-width: @desktop-width) {
     color: @color-main-button;
     background-color: @color-main;
     opacity: 0.3;
+  }
+}
+
+.photocard__description-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
   }
 }
