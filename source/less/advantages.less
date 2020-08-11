@@ -7,6 +7,22 @@
   }
 }
 
+.advantages__header,
+.advantages__number,
+.advantages__description {
+  font-size: @font-size-regular;
+  line-height: @line-height-main;
+  font-weight: @font-weight-main;
+
+  @media (max-width: @mobile-width-only) {
+    font-size: @font-size-mobile;
+  }
+}
+
+.advantages__title {
+  font-weight: @font-weight-secondary;
+}
+
 .advantages__minimize {
   @media (min-width: @tablet-width) {
     display: flex;
