@@ -109,25 +109,15 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
+    padding-top: 60px;
   }
 }
 
-//  SVG ФАЙЛЫ ПЕРЕНЕСЕНЫ В HTML, потом удалить отсюда
-// .advantages__nested-item--living {
-//   background-image: url("../img/icon-house.svg");
-// }
-
-// .advantages__nested-item--souvenirs {
-//   background-image: url("../img/icon-gift.svg");
-
-//   @media (min-width: @tablet-width) {
-//     order: 1;
-//   }
-// }
-
-// .advantages__nested-item--food {
-//   background-image: url("../img/icon-burger.svg");
-// }
+.advantages__nested-item:nth-of-type(2) {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
 
 .advantages__nested-item-text-wrapper {
   width: 80%;
@@ -138,6 +128,8 @@
   @media (min-width: @tablet-width) {
     margin-left: 0;
     align-self: center;
+    margin-top: 70px;
+    margin-bottom: 60px;
   }
 }
 // Как отцентрировать уконку? Не двигается =(
