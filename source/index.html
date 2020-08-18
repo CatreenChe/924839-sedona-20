@@ -11,12 +11,25 @@
 <body class="page">
   <header class="page-header">
     <a class="page-header__logo">
-      <img src="img/logo-mobile.svg" width="102" height="84" alt="Город Седона">
+      <picture>
+        <source media="(min-width:1200px)" srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width:768px)" srcset="img/logo-sedona-tablet.svg">
+        <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Город Седона">
+      </picture>
     </a>
     <nav class="nav nav--nojs">
 
       <button class="nav__toggle" type="button">
+
         <span class="visually-hidden">Открыть меню</span>
+
+        <!-- <a id="hamburger-icon" href="#" title="Menu">
+          <span class="line line-1"></span>
+           https://codepen.io/kerns/pen/yNJzGp
+
+        </a> -->
+
+
         <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px" y="0px" width="23.000px" height="22.000px" viewBox="0 0 23.000 22.000"
           enable-background="new 0 0 23.000 22.000" xml:space="preserve">
@@ -25,7 +38,8 @@
             <rect y="9.009" width="23.000" height="4.0" fill="#81B3D2" />
             <rect y="18.018" width="23.000" height="4.0" fill="#81B3D2" />
           </g>
-        </svg>
+        </svg> -->
+
         <!-- <span class="visually-hidden">Закрыть меню</span>
         <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199"
@@ -73,6 +87,7 @@
           </div>
           <ul class="advantages__nested-list">
             <li class="advantages__nested-item advantages__nested-item--living">
+              <!-- <svg></svg> -->
               <h3 class="advantages__title">Жилье</h3>
               <p class="advantages__description">
                 Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -93,6 +108,7 @@
         <li class="advantages__item">
           <div class="advantages__card advantages__card--highlighted">
             <h3 class="advantages__title">Там есть мост дьявола</h3>
+
             <b class="advantages__number">&mdash; №2 &mdash;</b>
             <p class="advantages__description"> Да, по нему можно пройти: если вы осмелитесь, конечно</p>
           </div>

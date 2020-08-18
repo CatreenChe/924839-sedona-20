@@ -10,8 +10,12 @@
 
 <body class="page">
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img src="img/logo-mobile.svg" width="102" height="84" alt="Город Седона">
+    <a class="page-header__logo">
+      <picture>
+        <source media="(min-width:1200px)" srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width:768px)" srcset="img/logo-sedona-tablet.svg">
+        <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Город Седона">
+      </picture>
     </a>
     <nav class="nav">
       <button class="nav__toggle" type="button">
