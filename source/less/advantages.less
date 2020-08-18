@@ -101,27 +101,46 @@
   background-repeat: no-repeat;
   padding: 0;
   width: 33.33%;
+  display: flex;
 
   @media (max-width: @mobile-width-only) {
     width: 100%;
   }
-}
-
-.advantages__nested-item--living {
-  background-image: url("../img/icon-house.svg");
-}
-
-.advantages__nested-item--souvenirs {
-  background-image: url("../img/icon-gift.svg");
 
   @media (min-width: @tablet-width) {
-    order: 1;
+    flex-direction: column;
   }
 }
 
-.advantages__nested-item--food {
-  background-image: url("../img/icon-burger.svg");
+//  SVG ФАЙЛЫ ПЕРЕНЕСЕНЫ В HTML, потом удалить отсюда
+// .advantages__nested-item--living {
+//   background-image: url("../img/icon-house.svg");
+// }
+
+// .advantages__nested-item--souvenirs {
+//   background-image: url("../img/icon-gift.svg");
+
+//   @media (min-width: @tablet-width) {
+//     order: 1;
+//   }
+// }
+
+// .advantages__nested-item--food {
+//   background-image: url("../img/icon-burger.svg");
+// }
+
+.advantages__nested-item-text-wrapper {
+  width: 80%;
+  margin-left: auto;
+  flex-direction: column;
+  outline: 2px solid red;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    align-self: center;
+  }
 }
+// Как отцентрировать уконку? Не двигается =(
 
 .advantages__image-wrapper {
   width: 66.66%;
