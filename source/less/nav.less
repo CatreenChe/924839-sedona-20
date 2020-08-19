@@ -8,8 +8,7 @@
     background-color: @background-main;
     font-size: @font-size-mobile;
     line-height: 40px;
-
-    // min-height: 223px;
+    width: 100%;
   }
 }
 
@@ -90,7 +89,6 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
   }
 }
 
@@ -98,9 +96,6 @@
   @media (max-width: @mobile-width-only) {
     position: relative;
     display: block;
-    // padding-left: 100vw;
-    // padding-right: 100vw;
-    // Как задать на всю ширину li?
   }
 }
 
@@ -123,6 +118,14 @@
     &:hover {
       color: @color-main-button;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    // padding: auto;
+    // padding-right: 30px;
+    // outline: 1px dotted green;
+
+    // Как растянуть навигацию на всю ширину page-header?
   }
 }
 

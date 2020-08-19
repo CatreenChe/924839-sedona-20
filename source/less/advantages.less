@@ -21,6 +21,7 @@
 
 .advantages__title {
   font-weight: @font-weight-secondary;
+  margin: 0;
 }
 
 .advantages__minimize {
@@ -74,6 +75,16 @@
   }
 }
 
+.advantages__nested-list svg {
+  outline: 1px dotted blueviolet;
+  transform: translate(128px, 0);
+  // Как сместить svg без привязки с px?
+
+  @media (max-width: @mobile-width-only) {
+    transform: scale(0.52, 0.51) translate(25px, 0);
+  }
+}
+
 .advantages__card {
   display: flex;
   flex-direction: column;
@@ -124,21 +135,24 @@
   margin-left: auto;
   flex-direction: column;
   outline: 2px solid red;
+  padding-top: 10px;
 
   @media (min-width: @tablet-width) {
     margin-left: 0;
     align-self: center;
-    margin-top: 70px;
+    margin-top: 26px;
     margin-bottom: 60px;
+    padding-top: 0;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 27px;
   }
 }
-// Как отцентрировать уконку? Не двигается =(
-
 .advantages__image-wrapper {
   width: 66.66%;
   background-color: @background-main;
-  // убрать потом подложку
   background-size: cover;
+  // убрать потом подложку
 
   img {
     vertical-align: middle; // to remove gap below img, https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image
