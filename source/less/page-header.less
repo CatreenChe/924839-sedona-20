@@ -3,6 +3,7 @@
   flex-direction: column;
   background-color: @white;
   outline: 1px solid orangered;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -19,6 +20,15 @@
   text-align: center;
   order: 2;
   outline: 1px solid blueviolet;
+
+  @media (min-width: @tablet-width) {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
 
   @media (min-width: @desktop-width) {
   }

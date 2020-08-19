@@ -10,10 +10,13 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
+    max-width: 648px;
+    margin: auto;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1200px;
   }
 }
 
@@ -34,6 +37,7 @@
 }
 
 .page-gallery__title {
+  text-align: center;
   font-size: @font-size-mobile;
 
   @media (min-width: @tablet-width) {
@@ -43,15 +47,24 @@
 }
 
 .page-gallery__description {
+  text-align: center;
   font-size: 14px;
   line-height: 24px;
-  // Или все таки 18 и 30?
+
+  @media (min-width: @tablet-width) {
+    padding-left: 155px;
+    padding-right: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 370px;
+    padding-right: 370px;
+  }
 }
 
 .page-gallery__title,
 .page-gallery__description {
   @media (max-width: @mobile-width-only) {
-    text-align: center;
     padding: 0 9px 0 12px;
   }
 }
