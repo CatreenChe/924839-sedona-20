@@ -19,6 +19,16 @@
   }
 }
 
+.advantages__number {
+  padding-top: 21px;
+  padding-bottom: 27px;
+}
+
+.advantages__description {
+  margin: auto;
+  // Или margin: 0?
+}
+
 .advantages__title {
   font-weight: @font-weight-secondary;
   margin: 0;
@@ -90,14 +100,33 @@
   flex-direction: column;
   background-color: @background-main-pale;
   text-align: center;
+  padding: 30px;
+  justify-content: space-between;
 }
 
 .advantages__card--highlighted {
   color: @color-main-button;
   background-color: @background-main;
+  padding: 40px 15px;
 
   @media (min-width: @tablet-width) {
     width: 33.33%;
+    padding: 40px 0;
+  }
+}
+
+.advantages__card--highlighted .advantages__description {
+  @media (min-width: @tablet-width) {
+    padding-left: 32px;
+    padding-right: 32px;
+    margin: 0;
+  }
+}
+
+.advantages__card--highlighted .advantages__title {
+  @media (min-width: @tablet-width) {
+    padding-left: 65px;
+    padding-right: 65px;
   }
 }
 
@@ -153,6 +182,10 @@
   background-color: @background-main;
   background-size: cover;
   // убрать потом подложку
+
+  .advantages__image-wrapper:nth-of-type(2) {
+    order: -1;
+  }
 
   img {
     vertical-align: middle; // to remove gap below img, https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image

@@ -88,7 +88,12 @@
             <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
           <div class="advantages__image-wrapper">
-            <img src="./img/main-city-mobile@1x.jpg" alt="Фото города">
+            <picture>
+              <source media="(min-width:1200px)" srcset="./img/main-city-desktop@1x.jpg">
+              <source media="(min-width:768px)" srcset="./img/main-city-tablet@1x.jpg">
+              <img src="./img/main-city-mobile@1x.jpg" alt="Фото города">
+            </picture>
+
           </div>
           <ul class="advantages__nested-list">
             <li class="advantages__nested-item">
@@ -158,10 +163,16 @@
             <h3 class="advantages__title">Там есть мост дьявола</h3>
 
             <b class="advantages__number">&mdash; №2 &mdash;</b>
-            <p class="advantages__description"> Да, по нему можно пройти: если вы осмелитесь, конечно</p>
+            <p class="advantages__description"> Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
           <div class="advantages__image-wrapper">
-            <img src="./img/main-bridge-mobile@1x.jpg" alt="Фото каньона">
+
+            <picture>
+              <source media="(min-width:1200px)" srcset="./img/main-bridge-desktop@1x.jpg">
+              <source media="(min-width:768px)" srcset="./img/main-bridge-tablet@1x.jpg">
+              <img src="./img/main-bridge-mobile@1x.jpg" alt="Фото каньона">
+            </picture>
+
           </div>
         </li>
         <div class="advantages__minimize">
@@ -169,7 +180,8 @@
             <div class="advantages__card">
               <h3 class="advantages__title">Небольшая площадь</h3>
               <b class="advantages__number">&mdash; №3 &mdash;</b>
-              <p class="advantages__description">Все интересные места находятся очень близко</p>
+              <p class="advantages__description">Все интересные места находятся очень близко
+              </p>
             </div>
           </li>
 
@@ -192,43 +204,46 @@
       </ul>
     </section>
 
-    <!-- <section class="city-hotels">
-      <h2 class="visually-hidden">Поиск гостиниц в городе</h2>
+    <!-- <section class=" city-hotels ">
+      <h2 class=" visually-hidden ">Поиск гостиниц в городе</h2>
       <b>Заинтересовались?</b>
-      <p class="city-hotels__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <button class="city-hotels__toggle" type="button">Найти гостиницу</button>
+      <p class=" city-hotels__description ">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <button class=" city-hotels__toggle " type=" button ">Найти гостиницу</button>
     </section> -->
   </main>
 
-  <footer class="page-footer">
-    <div class="page-footer__hashtag">
-      <a class="page-footer__insta" href="#">#visitsedona</a>
+  <footer class=" page-footer ">
+    <div class=" page-footer__hashtag ">
+      <a class=" page-footer__insta " href=" # ">#visitsedona</a>
     </div>
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">
-            <span class="visually-hidden">Твиттер</span>
+    <div class=" page-footer__social social ">
+      <ul class=" social__list ">
+        <li class=" social__item ">
+          <a class=" social__link social__link--twitter " href=" # ">
+            <span class=" visually-hidden ">Твиттер</span>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
-            <span class="visually-hidden">Фейсбук</span>
+        <li class=" social__item ">
+          <a class=" social__link social__link--facebook " href=" # ">
+            <span class=" visually-hidden ">Фейсбук</span>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="#">
-            <span class="visually-hidden">Ютуб</span>
+        <li class=" social__item ">
+          <a class=" social__link social__link--youtube " href=" # ">
+            <span class=" visually-hidden ">Ютуб</span>
           </a>
         </li>
       </ul>
     </div>
-    <div class="page-footer__copyright copyright">
-      <b class="copyright__text">Разработано</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="copyright__logo" width="26.9" height="34.1" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg" alt="Логотип HTML Academy">
-          <path
-            d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" />
+    <div class=" page-footer__copyright copyright ">
+      <b class=" copyright__text ">Разработано</b>
+      <a class=" copyright__link " href=" https://htmlacademy.ru/intensive/adaptive ">
+        <svg class=" copyright__logo " width=" 26.9 " height=" 34.1 " viewBox=" 0 0 27 35 " xmlns=" http://www.w3.org/2000/svg " alt=" Логотип HTML Academy ">
+          <path d=" M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9
+              12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3
+              14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3
+              21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9
+              25V15.1Z " />
         </svg>
       </a>
     </div>
