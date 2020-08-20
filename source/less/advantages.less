@@ -24,14 +24,24 @@
   padding-bottom: 27px;
 }
 
+.advantages__number,
 .advantages__description {
+  font-size: @font-size-main-text;
+  line-height: @line-height-main-text;
   margin: auto;
   // Или margin: 0?
 }
 
 .advantages__title {
+  font-size: @font-size-regular;
+  line-height: @line-height-main;
   font-weight: @font-weight-secondary;
   margin: 0;
+
+  @media (max-width: @mobile-width-only) {
+    font-size: @font-size-mobile;
+    line-height: @line-height-main;
+  }
 }
 
 .advantages__minimize {
@@ -80,13 +90,14 @@
 
   @media (max-width: @mobile-width-only) {
     flex-direction: column;
+    padding: 0 20px;
     text-align: start;
   }
 }
 
 .advantages__nested-list svg {
   outline: 1px dotted blueviolet;
-  transform: translate(128px, 0);
+  transform: translate(90px, 0);
   // Как сместить svg без привязки с px?
 
   @media (max-width: @mobile-width-only) {
@@ -112,6 +123,11 @@
     width: 33.33%;
     padding: 40px 0;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 33.33%;
+    padding: 50px 0;
+  }
 }
 
 .advantages__card--highlighted .advantages__description {
@@ -136,7 +152,6 @@
 }
 
 .advantages__nested-item {
-  background-color: lightyellow;
   background-repeat: no-repeat;
   padding: 0;
   width: 33.33%;
@@ -164,7 +179,6 @@
   flex-direction: column;
   outline: 2px solid red;
   padding-top: 10px;
-  padding-right: 20px;
 
   @media (min-width: @tablet-width) {
     margin-left: 0;
@@ -173,38 +187,45 @@
     margin-bottom: 60px;
     padding-top: 0;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0px;
+  }
   @media (min-width: @desktop-width) {
     margin-top: 27px;
   }
 }
 
 .advantages__nested-item-text-wrapper .advantages__description {
-  padding-top: 20px;
   padding-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 60px;
+    padding-top: 30px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-bottom: 80px;
+  }
 }
 
 .advantages__image-wrapper {
-  @media (min-width: @tablet-width) {
-    width: 66.66%;
-    background-color: @background-main;
-    background-size: cover;
-    // убрать потом подложку
+  width: 66.66%;
+  background-color: @background-main;
+  background-size: cover;
+  // убрать потом подложку
+
+  img {
+    vertical-align: middle; // to remove gap below img, https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image
+    width: 100%;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
   }
 }
 
 .advantages__item:nth-of-type(2) .advantages__image-wrapper {
-  @media (min-width: @tablet-width) {
-    order: -1;
-  }
-}
-
-.advantages__item {
-  img {
-    vertical-align: middle; // to remove gap below img, https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image
-    width: 100%;
-
-    @media (max-width: @mobile-width-only) {
-      width: 100%;
-    }
-  }
+  order: -1;
 }
