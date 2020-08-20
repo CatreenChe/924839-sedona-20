@@ -3,21 +3,27 @@
   outline: 1px solid black;
   font-size: 14px;
   line-height: @line-height-main;
+  width: 100%;
 
   @media (max-width: @mobile-width-only) {
     background-color: @background-main;
     font-size: @font-size-mobile;
     line-height: 40px;
-    width: 100%;
   }
 }
 
 .nav__item {
   padding-top: 10px;
   padding-bottom: 5px;
+  width: 20%;
+  text-align: center;
+  @media (min-width: @tablet-width) {
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+  }
 
   @media (max-width: @mobile-width-only) {
-    text-align: center;
     width: 100%;
 
     border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -85,6 +91,7 @@
   outline: 1px solid indigo;
   font-weight: @font-weight-secondary;
   width: 100%;
+  justify-content: space-around;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
