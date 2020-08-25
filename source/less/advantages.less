@@ -48,30 +48,26 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
+  }
+}
+
+.advantages__minimize .advantages__item {
+  @media (max-width: @mobile-width-only) {
+    flex-direction: column;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 33.33%;
   }
 }
 
 .advantages__item {
   outline: 1px solid green;
   display: flex;
-  flex-direction: column;
-
-  //   @media (max-width: @mobile-width-only){
-  //    padding: 0 20px;
-  // }  уже не нужен, вроде?
-
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
-.advantages__minimize .advantages__item {
-  @media (min-width: @tablet-width) {
-    // width: 33.33%; Не нужно, получаются зазоры между блоками
-  }
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .advantages__nested-list,
@@ -121,10 +117,14 @@
   color: @color-main-button;
   background-color: @background-main;
   padding: 40px 15px;
-  box-sizing: border-box;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+  }
 
   @media (min-width: @tablet-width) {
     width: 33.33%;
+    box-sizing: border-box;
   }
 }
 .advantages__card--highlighted img {
@@ -195,10 +195,7 @@
 .advantages__image-wrapper {
   width: 66.66%;
   height: 100%;
-  object-fit: fill;
-  background-color: @background-main;
-  background-size: cover;
-  // убрать потом подложку
+  object-fit: contain;
 
   img {
     vertical-align: middle; // to remove gap below img, https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image
