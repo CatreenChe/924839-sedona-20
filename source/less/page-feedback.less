@@ -5,16 +5,32 @@
 
 .page-feedback__title,
 .page-feedback__description {
+  text-align: center;
 }
 
 .page-feedback__title {
   font-size: @font-size-mobile;
   line-height: @line-height-main;
-  font-weight: @font-weight-secondary;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
-    line-height: @line-height-main;
+  }
+}
+
+.page-feedback__description {
+  font-size: @font-size-main-text;
+  line-height: 24px;
+  padding-right: 12px;
+  padding-left: 12px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 165px;
+    padding-right: 166px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 383px;
+    padding-right: 383px;
   }
 }
 
