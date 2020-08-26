@@ -1,17 +1,57 @@
 .city-hotels {
   display: flex;
   flex-direction: column;
-  text-align: inherit;
-  outline: 1px dotted green;
-  padding: 30px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: palevioletred;
+  max-width: 458px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .city-hotels__title {
-  line-height: @line-height-main;
   font-size: @font-size-regular;
+  line-height: @line-height-main;
+  font-weight: @font-weight-secondary;
+  margin: 30px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: @line-height-main;
+    margin: 50px 0 30px 0;
+  }
 }
 
 .city-hotels__description {
   line-height: 24px;
   font-size: @font-size-main-text;
+  padding: 0 20px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 auto;
+  }
+}
+
+.city-hotels__toggle {
+  background-color: @background-main;
+  color: @color-main-button;
+  text-transform: uppercase;
+  font-size: @font-size-regular;
+  line-height: @line-height-main;
+  font-weight: @font-weight-secondary;
+  padding: 16px 33px;
+  margin: 50px 0;
+
+  &:hover {
+    background-color: @background-main-hover;
+  }
+
+  &:active {
+    background-color: @background-main-active;
+    color: rgba(255, 255, 255, 0.3);
+    // Переписать через переменную
+  }
 }
