@@ -1,4 +1,5 @@
 .city-hotels {
+  outline: 2px solid blue;
 }
 
 .city-hotels__wrapper {
@@ -6,7 +7,7 @@
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  background-color: palevioletred;
+  // background-color: palevioletred;
   max-width: 458px;
 
   @media (min-width: @tablet-width) {
@@ -46,7 +47,7 @@
   line-height: @line-height-main;
   font-weight: @font-weight-secondary;
   padding: 16px 33px;
-  margin: 50px 0;
+  margin: 50px 20px;
 
   &:hover {
     background-color: @background-main-hover;
@@ -57,4 +58,8 @@
     color: rgba(255, 255, 255, 0.3);
     // Переписать через переменную
   }
+}
+
+.city-hotels__wrapper-map {
+  margin: 0;
 }
