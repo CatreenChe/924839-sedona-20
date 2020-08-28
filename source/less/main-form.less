@@ -2,27 +2,25 @@
   font-size: @font-size-mobile;
   line-height: @line-height-main;
   font-weight: @font-weight-secondary;
+  display: flex;
+  flex-direction: column;
+  outline: 2px solid palevioletred;
 
   @media (min-width: @tablet-width) {
     font-size: @font-size-regular;
   }
 }
 
-.main-form__person,
-.main-form__contacts,
-.main-form__emotion,
-.main-form__visited,
-.main-form__review {
-  border: none;
-}
-
 .main-form-wrapper {
+  outline: 2px solid blueviolet;
   border-top: 1px solid @gray;
 }
+.main-form__title {
+  justify-content: center;
+}
 
-.main-form__radio-input,
-.main-form__checkbox-input {
-  text-transform: none;
+.main-form__section {
+  border: none;
 }
 
 .main-form__list {
@@ -34,10 +32,38 @@
     font-weight: @font-weight-secondary;
     color: @color-main;
     background-color: @background-pale-form;
+    border: none;
+    padding: 20px;
   }
 }
 
-.main-form__review {
+.main-form__text-input {
+  padding-bottom: 20px;
+}
+
+.main-form__text-input-with-icon {
+  padding-bottom: 17px;
+
+  svg {
+    background-color: @background-icon-form;
+    padding: 20px;
+    position: absolute;
+    // Подогнать к блочкам
+  }
+}
+
+.main-form__field {
+  padding: 16px 0;
+  border: none;
+  width: 70%;
+}
+
+.main-form__radio-input,
+.main-form__checkbox-input {
+  text-transform: none;
+}
+
+.main-form__section--review {
   ::placeholder {
     font-size: @font-size-mobile;
     line-height: @line-height-main;
@@ -45,10 +71,9 @@
     color: @color-main;
   }
 }
+
 .main-form__reviews {
   background-color: @background-pale-form;
-  padding: 10px 22px;
-  border: none;
 }
 
 .main-form__button {
