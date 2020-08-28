@@ -2,9 +2,12 @@
   font-size: @font-size-mobile;
   line-height: @line-height-main;
   font-weight: @font-weight-secondary;
-  display: flex;
-  flex-direction: column;
+
   outline: 2px solid palevioletred;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  display: grid;
 
   @media (min-width: @tablet-width) {
     font-size: @font-size-regular;
@@ -21,10 +24,12 @@
 
 .main-form__section {
   border: none;
+  padding: 0;
 }
 
 .main-form__list {
   list-style: none;
+  margin: auto 0;
 
   ::placeholder {
     font-size: @font-size-mobile;
@@ -39,25 +44,61 @@
 
 .main-form__text-input {
   padding-bottom: 20px;
+
+  &:hover {
+    ::placeholder {
+      background-color: @background-checkbox-form-hover;
+    }
+  }
+  &:active {
+    ::placeholder {
+      background-color: @color-main-button;
+    }
+  }
+  // В тот момент, когда подставляю реальное имя, шрифты и фон слетают
 }
 
 .main-form__text-input-with-icon {
   padding-bottom: 17px;
+  font-size: @font-size-main-text;
+  line-height: @line-height-main;
+  font-weight: @font-weight-main;
 
   svg {
     background-color: @background-icon-form;
     padding: 20px;
-    position: absolute;
-    // Подогнать к блочкам
+    // Подогнать к блочкам.
   }
 }
 
 .main-form__field {
   padding: 16px 0;
   border: none;
-  width: 70%;
+  cursor: pointer;
+  // width: 70%;
+  // рандомное значение пока
 }
 
+.main-form__checkbox-icon {
+  padding: 15px 11px 15px 12px;
+  background-color: @background-pale-form;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @background-checkbox-form-hover;
+  }
+
+  &:active {
+    background-color: @background-checkbox-form-active;
+    // Это ведь не актив, вроде?
+    // Добавить прозрачность иконке
+  }
+}
+
+.main-form__radio-input {
+  padding: 15px;
+  // Потом тут будет большая кнопка
+}
 .main-form__radio-input,
 .main-form__checkbox-input {
   text-transform: none;
@@ -74,6 +115,9 @@
 
 .main-form__reviews {
   background-color: @background-pale-form;
+  min-height: 160px;
+  border: none;
+  padding: 10px 22px;
 }
 
 .main-form__button {
@@ -88,7 +132,23 @@
 }
 
 .main-form__side-note {
+  font-size: @font-size-main-text;
+  line-height: @line-height-main;
+  font-weight: @font-weight-main;
+
   @media (max-width: @mobile-width-only) {
     display: none;
+  }
+}
+
+.main-form-wrapper:nth-of-type(2) {
+  @media (min-width: @tablet-width) {
+    order: 0;
+  }
+}
+
+.main-form-wrapper:nth-of-type(3) {
+  @media (min-width: @tablet-width) {
+    order: -1;
   }
 }
