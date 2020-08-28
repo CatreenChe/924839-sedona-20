@@ -1,0 +1,69 @@
+.main-form {
+  font-size: @font-size-mobile;
+  line-height: @line-height-main;
+  font-weight: @font-weight-secondary;
+
+  @media (min-width: @tablet-width) {
+    font-size: @font-size-regular;
+  }
+}
+
+.main-form__person,
+.main-form__contacts,
+.main-form__emotion,
+.main-form__visited,
+.main-form__review {
+  border: none;
+}
+
+.main-form-wrapper {
+  border-top: 1px solid @gray;
+}
+
+.main-form__radio-input,
+.main-form__checkbox-input {
+  text-transform: none;
+}
+
+.main-form__list {
+  list-style: none;
+
+  ::placeholder {
+    font-size: @font-size-mobile;
+    line-height: @line-height-main;
+    font-weight: @font-weight-secondary;
+    color: @color-main;
+    background-color: @background-pale-form;
+  }
+}
+
+.main-form__review {
+  ::placeholder {
+    font-size: @font-size-mobile;
+    line-height: @line-height-main;
+    font-weight: @font-weight-secondary;
+    color: @color-main;
+  }
+}
+.main-form__reviews {
+  background-color: @background-pale-form;
+  padding: 10px 22px;
+  border: none;
+}
+
+.main-form__button {
+  background-color: @background-main;
+  color: @color-main-button;
+  text-transform: uppercase;
+  font-size: @font-size-regular;
+  line-height: @line-height-main;
+  font-weight: @font-weight-secondary;
+  border: none;
+  padding: 16px 33px;
+}
+
+.main-form__side-note {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}

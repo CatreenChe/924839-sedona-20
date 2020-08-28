@@ -57,115 +57,121 @@
     </p>
 
     <form class="main-form">
-      <fieldset class="main-form__person">
-        <legend class="main-form__title">Представьтесь:</legend>
-        <ul class="main-form__list">
-          <li class="main-form__text-input">
-            <label for="user-firstname">Имя*:</label>
-            <input type="text" id="user-firstname" name="firstname" placeholder="Петр" required>
-          </li>
-          <li class="main-form__text-input">
-            <label for="user-lastname">Фамилия*:</label>
-            <input type="text" id="user-lastname" name="lastname" placeholder="Иванов" required>
-          </li>
-          <li class="main-form__text-input">
-            <label for="user-middlename">Отчество:</label>
-            <input type="text" id="user-middlename" name="middlename" placeholder="Александрович">
-          </li>
-        </ul>
-      </fieldset>
-
-      <fieldset class="main-form__contacts">
-        <legend class="main-form__title">Контактная информация:</legend>
-        <ul class="main-form__list">
-          <li class="main-form__text-input-with-icon">
-            <label for="user-phone">Контактный телефон*:</label>
-            <input type="text" id="user-phone" name="telephone" placeholder="Введите телефон" required>
-            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 18 18"
-              enable-background="new 0 0 18 18" xml:space="preserve">
-              <g id="Page-1">
-                <g id="Icons-Communication" transform="translate(-85.000000, -126.000000)">
-                  <g id="phone" transform="translate(85.000000, 126.000000)">
-                    <path id="Shape" fill="#010101"
-                      d="M3.6,7.8C5,10.6,7.4,12.9,10.2,14.4l2.2-2.2c0.3-0.3,0.699-0.4,1-0.2c1.1,0.4,2.3,0.6,3.6,0.6 c0.6,0,1,0.4,1,1V17c0,0.6-0.4,1-1,1C7.6,18,0,10.4,0,1c0-0.6,0.4-1,1-1h3.5c0.6,0,1,0.4,1,1c0,1.2,0.2,2.4,0.6,3.6 c0.1,0.3,0,0.7-0.2,1L3.6,7.8L3.6,7.8z" />
+      <div class="main-form-wrapper">
+        <fieldset class="main-form__person">
+          <legend class="main-form__title">Представьтесь:</legend>
+          <ul class="main-form__list">
+            <li class="main-form__text-input">
+              <label for="user-firstname">Имя*:</label>
+              <input type="text" id="user-firstname" name="firstname" placeholder="Петр" required>
+            </li>
+            <li class="main-form__text-input">
+              <label for="user-lastname">Фамилия*:</label>
+              <input type="text" id="user-lastname" name="lastname" placeholder="Иванов" required>
+            </li>
+            <li class="main-form__text-input">
+              <label for="user-middlename">Отчество:</label>
+              <input type="text" id="user-middlename" name="middlename" placeholder="Александрович">
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="main-form-wrapper">
+        <fieldset class="main-form__contacts">
+          <legend class="main-form__title">Контактная информация:</legend>
+          <ul class="main-form__list">
+            <li class="main-form__text-input-with-icon">
+              <label for="user-phone">Контактный телефон*:</label>
+              <input type="text" id="user-phone" name="telephone" placeholder="Введите телефон" required>
+              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px"
+                viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve">
+                <g id="Page-1">
+                  <g id="Icons-Communication" transform="translate(-85.000000, -126.000000)">
+                    <g id="phone" transform="translate(85.000000, 126.000000)">
+                      <path id="Shape" fill="#010101"
+                        d="M3.6,7.8C5,10.6,7.4,12.9,10.2,14.4l2.2-2.2c0.3-0.3,0.699-0.4,1-0.2c1.1,0.4,2.3,0.6,3.6,0.6 c0.6,0,1,0.4,1,1V17c0,0.6-0.4,1-1,1C7.6,18,0,10.4,0,1c0-0.6,0.4-1,1-1h3.5c0.6,0,1,0.4,1,1c0,1.2,0.2,2.4,0.6,3.6 c0.1,0.3,0,0.7-0.2,1L3.6,7.8L3.6,7.8z" />
+                    </g>
                   </g>
                 </g>
-              </g>
-            </svg>
-          </li>
-          <li class="main-form__text-input-with-icon">
-            <label for="user-mail">Электронная почта*:</label>
-            <input type="text" name="mail" placeholder="Введите e-mail" required>
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16"
-              enable-background="new 0 0 16 16" xml:space="preserve">
-              <path
-                d="M8,10c-0.266,0-0.5-0.094-1-0.336L0,6v7c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1V6L9,9.664C8.5,9.906,8.266,10,8,10z M15,2 H1C0.45,2,0,2.45,0,3v0.758l8,4.205l8-4.205V3C16,2.45,15.55,2,15,2z" />
-            </svg>
-          </li>
-        </ul>
-      </fieldset>
-
-      <fieldset class="main-form__emotion">
-        <legend class="main-form__title">Ваше общее впечатление:</legend>
-        <ul class="main-form__list">
-          <li class="main-form__radio-input">
-            <label for="feedback-positive">Скорее положительное</label>
-            <input type="radio" id="feedback-positive" value="feedback-positive" name="feedback">
-          </li>
-          <li class="main-form__radio-input">
-            <label for="feedback-negative">Скорее отрицательное</label>
-            <input type="radio" id="feedback-negative" value="feedback-negative" name="feedback">
-          </li>
-          <li class="main-form__radio-input">
-            <label for="feedback-dontknow">Затрудняюсь ответить</label>
-            <input type="radio" id="feedback-dontknow" value="feedback-dontknow" name="feedback">
-          </li>
-        </ul>
-      </fieldset>
-
-      <fieldset class="main-form__visited">
-        <legend class="main-form__title">Посещенные достопримечательности</legend>
-        <ul class="main-form__list">
-          <li class="main-form__checkbox-input">
-            <label for="place-bridge">Мост Дьявола</label>
-            <input type="checkbox" id="place-bridge" name="place" checked>
-            <svg width="23.049px" height="16.249px">
-              <path
-                d="M22.801,1.299L21.75,0.248c-0.331-0.331-0.872-0.331-1.203,0L8.693,12.102L2.502,5.911c-0.331-0.331-0.872-0.331-1.203,0 L0.248,6.962c-0.331,0.331-0.331,0.872,0,1.202l7.837,7.837c0.167,0.167,0.388,0.248,0.608,0.246c0.22,0.002,0.44-0.079,0.608-0.246 l13.5-13.5C23.132,2.171,23.132,1.63,22.801,1.299z" />
-            </svg>
-          </li>
-          <li class="main-form__checkbox-input">
-            <label for="place-mountain">Гора-Колокол</label>
-            <input type="checkbox" id="place-mountain" name="place" checked>
-            <svg width="23.049px" height="16.249px">
-              <path
-                d="M22.801,1.299L21.75,0.248c-0.331-0.331-0.872-0.331-1.203,0L8.693,12.102L2.502,5.911c-0.331-0.331-0.872-0.331-1.203,0 L0.248,6.962c-0.331,0.331-0.331,0.872,0,1.202l7.837,7.837c0.167,0.167,0.388,0.248,0.608,0.246c0.22,0.002,0.44-0.079,0.608-0.246 l13.5-13.5C23.132,2.171,23.132,1.63,22.801,1.299z" />
-            </svg>
-          </li>
-          <li class="main-form__checkbox-input">
-            <label for="place-park">Слайд-парк</label>
-            <input type="checkbox" id="place-park" name="place" checked>
-            <svg width="23.049px" height="16.249px">
-              <path
-                d="M22.801,1.299L21.75,0.248c-0.331-0.331-0.872-0.331-1.203,0L8.693,12.102L2.502,5.911c-0.331-0.331-0.872-0.331-1.203,0 L0.248,6.962c-0.331,0.331-0.331,0.872,0,1.202l7.837,7.837c0.167,0.167,0.388,0.248,0.608,0.246c0.22,0.002,0.44-0.079,0.608-0.246 l13.5-13.5C23.132,2.171,23.132,1.63,22.801,1.299z" />
-            </svg>
-          </li>
-          <li class="main-form__checkbox-input">
-            <label for="place-rocks">Красные скалы</label>
-            <input type="checkbox" id="place-rocks" name="place">
-          </li>
-        </ul>
-      </fieldset>
-
+              </svg>
+            </li>
+            <li class="main-form__text-input-with-icon">
+              <label for="user-mail">Электронная почта*:</label>
+              <input type="text" name="mail" placeholder="Введите e-mail" required>
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
+                viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path
+                  d="M8,10c-0.266,0-0.5-0.094-1-0.336L0,6v7c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1V6L9,9.664C8.5,9.906,8.266,10,8,10z M15,2 H1C0.45,2,0,2.45,0,3v0.758l8,4.205l8-4.205V3C16,2.45,15.55,2,15,2z" />
+              </svg>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="main-form-wrapper">
+        <fieldset class="main-form__emotion">
+          <legend class="main-form__title">Ваше общее впечатление:</legend>
+          <ul class="main-form__list">
+            <li class="main-form__radio-input">
+              <label for="feedback-positive">Скорее положительное</label>
+              <input type="radio" id="feedback-positive" value="feedback-positive" name="feedback" checked>
+            </li>
+            <li class="main-form__radio-input">
+              <label for="feedback-negative">Скорее отрицательное</label>
+              <input type="radio" id="feedback-negative" value="feedback-negative" name="feedback">
+            </li>
+            <li class="main-form__radio-input">
+              <label for="feedback-dontknow">Затрудняюсь ответить</label>
+              <input type="radio" id="feedback-dontknow" value="feedback-dontknow" name="feedback">
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="main-form-wrapper">
+        <fieldset class="main-form__visited">
+          <legend class="main-form__title">Посещенные достопримечательности</legend>
+          <ul class="main-form__list">
+            <li class="main-form__checkbox-input">
+              <label for="place-bridge">Мост Дьявола</label>
+              <input type="checkbox" id="place-bridge" name="place" checked>
+              <svg width="23.049px" height="16.249px">
+                <path
+                  d="M22.801,1.299L21.75,0.248c-0.331-0.331-0.872-0.331-1.203,0L8.693,12.102L2.502,5.911c-0.331-0.331-0.872-0.331-1.203,0 L0.248,6.962c-0.331,0.331-0.331,0.872,0,1.202l7.837,7.837c0.167,0.167,0.388,0.248,0.608,0.246c0.22,0.002,0.44-0.079,0.608-0.246 l13.5-13.5C23.132,2.171,23.132,1.63,22.801,1.299z" />
+              </svg>
+            </li>
+            <li class="main-form__checkbox-input">
+              <label for="place-mountain">Гора-Колокол</label>
+              <input type="checkbox" id="place-mountain" name="place" checked>
+              <svg width="23.049px" height="16.249px">
+                <path
+                  d="M22.801,1.299L21.75,0.248c-0.331-0.331-0.872-0.331-1.203,0L8.693,12.102L2.502,5.911c-0.331-0.331-0.872-0.331-1.203,0 L0.248,6.962c-0.331,0.331-0.331,0.872,0,1.202l7.837,7.837c0.167,0.167,0.388,0.248,0.608,0.246c0.22,0.002,0.44-0.079,0.608-0.246 l13.5-13.5C23.132,2.171,23.132,1.63,22.801,1.299z" />
+              </svg>
+            </li>
+            <li class="main-form__checkbox-input">
+              <label for="place-park">Слайд-парк</label>
+              <input type="checkbox" id="place-park" name="place" checked>
+              <svg width="23.049px" height="16.249px">
+                <path
+                  d="M22.801,1.299L21.75,0.248c-0.331-0.331-0.872-0.331-1.203,0L8.693,12.102L2.502,5.911c-0.331-0.331-0.872-0.331-1.203,0 L0.248,6.962c-0.331,0.331-0.331,0.872,0,1.202l7.837,7.837c0.167,0.167,0.388,0.248,0.608,0.246c0.22,0.002,0.44-0.079,0.608-0.246 l13.5-13.5C23.132,2.171,23.132,1.63,22.801,1.299z" />
+              </svg>
+            </li>
+            <li class="main-form__checkbox-input">
+              <label for="place-rocks">Красные скалы</label>
+              <input type="checkbox" id="place-rocks" name="place">
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      </div>
+      <div class="main-form-wrapper"></div>
       <fieldset class="main-form__review">
         <legend class="main-form__title">Опишите свои эмоции</legend>
         <textarea class="main-form__reviews" id="review-text" name="review"
           placeholder="Опишите подробно все свои восторги" rows="5"></textarea>
       </fieldset>
       <div class="main-form__submit">
-        <button class="main-form__button" type="button">Отправить отзыв</button>
+        <button class="main-form__button" type="submit">Отправить отзыв</button>
       </div>
       <p class="main-form__side-note">* — обязательные поля</p>
     </form>
