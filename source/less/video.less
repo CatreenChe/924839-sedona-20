@@ -5,6 +5,14 @@
   margin: 0 auto;
 
   outline: 2px solid blue;
+
+  @media (min-width: @tablet-width) {
+    max-width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 800px;
+  }
 }
 
 .video__title {
