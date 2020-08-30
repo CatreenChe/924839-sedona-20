@@ -4,13 +4,21 @@
   font-weight: @font-weight-secondary;
 
   outline: 2px solid palevioletred;
-  padding-left: 20px;
-  padding-right: 20px;
-
   display: grid;
+  margin: auto;
+
+  // @media (max-width: @mobile-width-only) {
+  //   max-width: 279px;
+  // }
 
   @media (min-width: @tablet-width) {
     font-size: @font-size-regular;
+    line-height: @line-height-main;
+    grid-template-columns: 1fr 1fr;
+    max-width: 648px;
+  }
+  @media (min-width: @tablet-width) {
+    max-width: 960px;
   }
 }
 
@@ -18,18 +26,29 @@
   outline: 2px solid blueviolet;
   border-top: 1px solid @gray;
 }
+
+.main-form-wrapper--big {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
 .main-form__title {
-  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
 .main-form__section {
   border: none;
-  padding: 0;
+  padding: ;
 }
 
 .main-form__list {
   list-style: none;
   margin: auto 0;
+  padding: 0;
 
   ::placeholder {
     font-size: @font-size-mobile;
@@ -43,6 +62,8 @@
 }
 
 .main-form__text-input {
+  display: flex;
+  padding: 0;
   padding-bottom: 20px;
 
   &:hover {
@@ -59,7 +80,10 @@
 }
 
 .main-form__text-input-with-icon {
-  padding-bottom: 17px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  padding-bottom: 20px;
   font-size: @font-size-main-text;
   line-height: @line-height-main;
   font-weight: @font-weight-main;
@@ -69,14 +93,21 @@
     padding: 20px;
     // Подогнать к блочкам.
   }
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+
+  &:label {
+    flex-wrap: nowrap;
+  }
 }
 
 .main-form__field {
   padding: 16px 0;
   border: none;
   cursor: pointer;
-  // width: 70%;
-  // рандомное значение пока
+  width: 100%;
+  outline: 1px solid thistle;
 }
 
 .main-form__checkbox-icon {
@@ -96,12 +127,31 @@
 }
 
 .main-form__radio-input {
-  padding: 15px;
   // Потом тут будет большая кнопка
 }
 .main-form__radio-input,
 .main-form__checkbox-input {
   text-transform: none;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+.main-form__section--contacts .main-form__list {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.main-form__section--visited .main-form__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .main-form__section--review {
@@ -120,6 +170,11 @@
   padding: 10px 22px;
 }
 
+.main-form__submit {
+  margin: 0;
+  padding: 0 20px;
+}
+
 .main-form__button {
   background-color: @background-main;
   color: @color-main-button;
@@ -129,6 +184,7 @@
   font-weight: @font-weight-secondary;
   border: none;
   padding: 16px 33px;
+  width: 100%;
 }
 
 .main-form__side-note {
