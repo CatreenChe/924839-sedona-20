@@ -7,9 +7,9 @@
   display: grid;
   margin: auto;
 
-  // @media (max-width: @mobile-width-only) {
-  //   max-width: 279px;
-  // }
+  @media (max-width: @mobile-width-only) {
+    padding: 0 20px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: @font-size-regular;
@@ -42,7 +42,7 @@
 
 .main-form__section {
   border: none;
-  padding: ;
+  padding: 0;
 }
 
 .main-form__list {
@@ -51,13 +51,8 @@
   padding: 0;
 
   ::placeholder {
-    font-size: @font-size-mobile;
-    line-height: @line-height-main;
-    font-weight: @font-weight-secondary;
     color: @color-main;
-    background-color: @background-pale-form;
-    border: none;
-    padding: 20px;
+    // По макету placeholder тоже черного цвета, но как-то это странно. Должно ведь быть визуал.отличие подсказки от заполненной формы
   }
 }
 
@@ -65,49 +60,70 @@
   display: flex;
   padding: 0;
   padding-bottom: 20px;
-
-  &:hover {
-    ::placeholder {
-      background-color: @background-checkbox-form-hover;
-    }
-  }
-  &:active {
-    ::placeholder {
-      background-color: @color-main-button;
-    }
-  }
-  // В тот момент, когда подставляю реальное имя, шрифты и фон слетают
 }
 
 .main-form__text-input-with-icon {
   display: flex;
   flex-direction: column;
-  padding: 0;
+
   padding-bottom: 20px;
-  font-size: @font-size-main-text;
-  line-height: @line-height-main;
-  font-weight: @font-weight-main;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    white-space: nowrap;
+  }
+}
+.main-form__text-and-icon-wrapper {
+  display: flex;
 
   svg {
     background-color: @background-icon-form;
     padding: 20px;
-    // Подогнать к блочкам.
   }
-  @media (min-width: @desktop-width) {
-    flex-direction: row;
-  }
+}
 
-  &:label {
-    flex-wrap: nowrap;
+.main-form__user-data {
+  font-size: @font-size-main-text;
+  line-height: @line-height-main;
+  font-weight: @font-weight-main;
+  padding-right: 20px;
+  margin: auto 0;
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+  }
+}
+
+.main-form__text-input-with-icon .main-form__user-data {
+  padding-right: 0;
+  margin-left: 20px;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 20px;
+    margin: auto;
   }
 }
 
 .main-form__field {
-  padding: 16px 0;
   border: none;
   cursor: pointer;
   width: 100%;
+  box-sizing: border-box;
   outline: 1px solid thistle;
+  font-size: @font-size-mobile;
+  line-height: @line-height-main;
+  font-weight: @font-weight-secondary;
+  color: @color-main;
+  background-color: @background-pale-form;
+  border: none;
+  padding: 16px 20px;
+
+  &:hover {
+    background-color: @background-checkbox-form-hover;
+  }
+  &:focus {
+    background-color: @color-main-button;
+  }
 }
 
 .main-form__checkbox-icon {
@@ -126,14 +142,12 @@
   }
 }
 
-.main-form__radio-input {
-  // Потом тут будет большая кнопка
-}
 .main-form__radio-input,
 .main-form__checkbox-input {
+  font-size: @font-size-mobile;
+  line-height: @line-height-main;
   text-transform: none;
-  padding: 0;
-  padding-bottom: 20px;
+  padding: 10px 0;
 }
 
 .main-form__section--contacts .main-form__list {
@@ -168,11 +182,13 @@
   min-height: 160px;
   border: none;
   padding: 10px 22px;
+
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .main-form__submit {
   margin: 0;
-  padding: 0 20px;
 }
 
 .main-form__button {
@@ -183,7 +199,7 @@
   line-height: @line-height-main;
   font-weight: @font-weight-secondary;
   border: none;
-  padding: 16px 33px;
+  padding: 16px 0;
   width: 100%;
 }
 
@@ -191,6 +207,8 @@
   font-size: @font-size-main-text;
   line-height: @line-height-main;
   font-weight: @font-weight-main;
+  display: grid;
+  justify-content: end;
 
   @media (max-width: @mobile-width-only) {
     display: none;
