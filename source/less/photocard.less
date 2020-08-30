@@ -26,6 +26,10 @@
   }
 }
 
+.photocard__likes-counter {
+  padding-left: 15px;
+}
+
 .photocard__author {
   font-size: @font-size-main-text;
   line-height: 24px;
@@ -38,8 +42,6 @@
 }
 
 .photocard__likes-icon {
-  background-image: url("../img/icon-like.svg");
-  background-repeat: no-repeat;
   opacity: 0.3;
   width: 23px;
   height: 22px;
@@ -65,14 +67,33 @@
     padding-right: 26px;
     padding-top: 22px;
     padding-bottom: 15px;
+
     margin-top: -85px;
-    // Пропала полупрозрачность (спряталась вниз)
+
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
 .photocard__description-wrapper {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: @tablet-width) {
-    display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.photocard__img-wrapper {
+  overflow: hidden;
+  max-height: 267px;
+
+  @media (min-width: @tablet-width) {
+    &--big {
+      max-height: none;
+    }
   }
 }
