@@ -33,6 +33,7 @@
     &:hover {
       background-color: @background-main-hover;
     }
+
     &:active {
       background-color: @background-main-active;
     }
@@ -58,6 +59,7 @@
   &:focus {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
@@ -72,9 +74,11 @@
     height: 4px;
     background-color: @color-main-button;
   }
+
   &::after {
     transform: rotate(45deg);
   }
+
   &::before {
     transform: rotate(-45deg);
   }
@@ -96,6 +100,7 @@
     color: @background-main;
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
@@ -173,6 +178,7 @@
   &:hover {
     color: @color-nav-active-hover;
   }
+
   &:active {
     color: @color-nav-active;
     opacity: 0.3;
@@ -180,9 +186,11 @@
 
   @media (max-width: @mobile-width-only) {
     color: @color-main-button;
+
     &:hover {
       color: @color-main-button;
     }
+
     &:active {
       opacity: 0.3;
     }
