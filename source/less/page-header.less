@@ -1,29 +1,41 @@
 .page-header {
+  position: relative;
+  max-height: 279px;
+
   display: flex;
   flex-direction: column;
-  color: @black;
   background-color: @white;
-  border: 2px solid orangered;
+  outline: 1px solid orangered;
+  width: 100%;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    background-color: lightseagreen;
+    background-color: burlywood;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
-    background-color: red;
+    background-color: yellow;
   }
 }
 
 .page-header__logo {
-  height: 84px;
-  width: 103px;
-  // ширина не должна быть фиксированной?
+  text-align: center;
   order: 2;
-  border: 2px solid blueviolet;
+  outline: 1px solid blueviolet;
 
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+}
+
+.page-header__logo img {
   @media (min-width: @desktop-width) {
-    height: 97px;
+    width: 187px;
+    height: 96px;
   }
 }

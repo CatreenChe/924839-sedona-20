@@ -1,0 +1,96 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+
+  outline: 2px solid blue;
+
+  @media (min-width: @tablet-width) {
+    max-width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 800px;
+  }
+}
+
+.video__title {
+  font-size: @font-size-regular;
+  line-height: @line-height-main;
+  font-weight: @font-weight-secondary;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: @line-height-main;
+  }
+}
+
+.video__description {
+  line-height: 24px;
+  font-size: @font-size-main-text;
+}
+
+.video__controls {
+  outline: 3px solid green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: @mobile-width-only) {
+    background-color: @background-pale-form;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: -95px;
+    height: 93px;
+  }
+}
+
+.video__fullscreen,
+.video__replay,
+.video__subtitles {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.video__fullscreen {
+  polygon {
+    fill: #5c6870;
+
+    @media (min-width: @tablet-width) {
+      fill: @color-main-button;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.video__replay,
+.video__subtitles {
+  path {
+    fill: #5c6870;
+
+    @media (min-width: @tablet-width) {
+      fill: @color-main-button;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+// Прописать состояния кнопок в мобильной версии. Пока не разобралась. Цвета прописаны в файле variables

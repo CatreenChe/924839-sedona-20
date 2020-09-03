@@ -2,16 +2,21 @@
   font-family: @font-family-main;
   font-style: @font-style-main;
   font-weight: @font-weight-main;
+  font-size: @font-size-regular;
+  line-height: @line-height-main;
+  text-transform: uppercase;
   margin: 0 auto;
 
+  @media (max-width: @mobile-width-only) {
+    font-size: @font-size-mobile;
+    line-height: @line-height-main;
+  }
+
   @media (min-width: @tablet-width) {
-    width: 768px;
+    max-width: @desktop-width;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1200px;
+    width: @desktop-width;
   }
 }
-
-// Не очень понятно, что писать сюда, а что относится к global.less.
-// В обоих файлах задаются общие правила ведь Или файл page не обязателен (как не нужен отдельный файл visually-hidden, если его значения прописать в global)?

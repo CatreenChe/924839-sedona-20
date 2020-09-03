@@ -2,15 +2,21 @@
   display: inherit;
   justify-content: space-around;
   align-items: inherit;
-  font-size: 14px;
-  line-height: 26px;
-  min-width: 148px;
-  border: 1px dotted darkorchid;
+  font-size: @font-size-main-text;
+  line-height: @line-height-main;
+  font-weight: @font-weight-main;
+  padding-bottom: 20px;
+  padding-top: 40px;
+
+  outline: 1px dotted darkorchid;
+
+  @media (min-width: @tablet-width) {
+    justify-content: center;
+  }
 }
 
 .copyright__text {
-  font-size: 14px;
-  line-height: 26px;
+  margin-right: 12px;
 }
 
 .copyright__link {

@@ -1,0 +1,232 @@
+.main-form {
+  font-size: @font-size-mobile;
+  line-height: @line-height-main;
+  font-weight: @font-weight-secondary;
+
+  outline: 2px solid palevioletred;
+  display: grid;
+  margin: auto;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: @font-size-regular;
+    line-height: @line-height-main;
+    grid-template-columns: 1fr 1fr;
+    max-width: 648px;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 960px;
+  }
+}
+
+.main-form-wrapper {
+  outline: 2px solid blueviolet;
+  border-top: 1px solid @gray;
+}
+
+.main-form-wrapper--big {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.main-form__title {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-form__section {
+  border: none;
+  padding: 0;
+}
+
+.main-form__list {
+  list-style: none;
+  margin: auto 0;
+  padding: 0;
+
+  ::placeholder {
+    color: @color-main;
+    // По макету placeholder тоже черного цвета, но как-то это странно. Должно ведь быть визуал.отличие подсказки от заполненной формы
+  }
+}
+
+.main-form__text-input {
+  display: flex;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+.main-form__text-input-with-icon {
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    white-space: nowrap;
+  }
+}
+
+.main-form__text-and-icon-wrapper {
+  display: flex;
+
+  svg {
+    background-color: @background-icon-form;
+    padding: 20px;
+  }
+}
+
+.main-form__user-data {
+  font-size: @font-size-main-text;
+  line-height: @line-height-main;
+  font-weight: @font-weight-main;
+  padding-right: 20px;
+  margin: auto 0;
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+  }
+}
+
+.main-form__text-input-with-icon .main-form__user-data {
+  padding-right: 0;
+  margin-left: 20px;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 20px;
+    margin: auto;
+  }
+}
+
+.main-form__field {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 1px solid thistle;
+  font-size: @font-size-mobile;
+  line-height: @line-height-main;
+  font-weight: @font-weight-secondary;
+  color: @color-main;
+  background-color: @background-pale-form;
+  padding: 16px 20px;
+
+  &:hover {
+    background-color: @background-checkbox-form-hover;
+  }
+
+  &:focus {
+    background-color: @color-main-button;
+  }
+}
+
+.main-form__checkbox-icon {
+  padding: 15px 11px 15px 12px;
+  background-color: @background-pale-form;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @background-checkbox-form-hover;
+  }
+
+  &:active {
+    background-color: @background-checkbox-form-active;
+    // Это ведь не актив, вроде?
+    // Добавить прозрачность иконке
+  }
+}
+
+.main-form__radio-input,
+.main-form__checkbox-input {
+  font-size: @font-size-mobile;
+  line-height: @line-height-main;
+  text-transform: none;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.main-form__section--contacts .main-form__list {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.main-form__section--visited .main-form__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.main-form__section--review {
+  ::placeholder {
+    font-size: @font-size-mobile;
+    line-height: @line-height-main;
+    font-weight: @font-weight-secondary;
+    color: @color-main;
+  }
+}
+
+.main-form__reviews {
+  background-color: @background-pale-form;
+  min-height: 160px;
+  border: none;
+  padding: 10px 22px;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-form__submit {
+  margin: 0;
+}
+
+.main-form__button {
+  background-color: @background-main;
+  color: @color-main-button;
+  text-transform: uppercase;
+  font-size: @font-size-regular;
+  line-height: @line-height-main;
+  font-weight: @font-weight-secondary;
+  border: none;
+  padding: 16px 0;
+  width: 100%;
+}
+
+.main-form__side-note {
+  font-size: @font-size-main-text;
+  line-height: @line-height-main;
+  font-weight: @font-weight-main;
+  display: grid;
+  justify-content: end;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-form-wrapper:nth-of-type(2) {
+  @media (min-width: @tablet-width) {
+    order: 0;
+  }
+}
+
+.main-form-wrapper:nth-of-type(3) {
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
+}
