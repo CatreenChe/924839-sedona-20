@@ -77,10 +77,13 @@
 
 .main-form__text-and-icon-wrapper {
   display: flex;
+  position: relative;
 
   svg {
     background-color: @background-icon-form;
     padding: 20px;
+    position: absolute;
+    right: 0;
   }
 }
 
@@ -115,9 +118,11 @@
   font-size: @font-size-mobile;
   line-height: @line-height-main;
   font-weight: @font-weight-secondary;
-  color: @color-main;
+
   background-color: @background-pale-form;
   padding: 16px 20px;
+  display: flex;
+  color: @color-main;
 
   &:hover {
     background-color: @background-checkbox-form-hover;
@@ -174,14 +179,16 @@
 
 .main-form__section--review {
   ::placeholder {
-    font-size: @font-size-mobile;
-    line-height: @line-height-main;
-    font-weight: @font-weight-secondary;
     color: @color-main;
   }
 }
 
 .main-form__reviews {
+  font-style: @font-family-main;
+  font-size: @font-size-mobile;
+  line-height: @line-height-main;
+  font-weight: @font-weight-secondary;
+
   background-color: @background-pale-form;
   min-height: 160px;
   border: none;
