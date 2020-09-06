@@ -1,9 +1,15 @@
 .photocard {
   padding: 20px;
   overflow: hidden;
+  display: grid;
+  justify-content: center;
 
   @media (min-width: @tablet-width) {
     padding: 0;
+
+    .photo {
+      width: 100%;
+    }
   }
 
   @media (min-width: @desktop-width) {
