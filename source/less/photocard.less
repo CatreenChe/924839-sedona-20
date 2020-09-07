@@ -5,7 +5,12 @@
   display: grid;
   justify-content: center;
   padding: 0;
-  margin-top: 30px;
+  margin-top: 26px;
+
+  .photo {
+    // max-height: 267px;
+    max-height: 100%;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -18,14 +23,12 @@
   @media (min-width: @desktop-width) {
     padding: 0;
   }
-  .photo {
-    max-height: 267px;
-  }
 }
 
 .photocard__likes {
   outline: 1px solid aqua;
   display: flex;
+  margin-bottom: 13px;
 }
 
 .photocard__title,
@@ -70,7 +73,7 @@
 }
 
 .photocard__description {
-  margin-top: 15px;
+  margin-top: 3px;
 
   @media (min-width: @tablet-width) {
     background-color: @background-pale-form;
