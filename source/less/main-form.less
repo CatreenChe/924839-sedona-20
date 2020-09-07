@@ -33,7 +33,8 @@
 
 .main-form__title {
   margin: 0 auto;
-  padding: 20px 0;
+
+  padding-top: 22px;
   text-align: center;
 }
 
@@ -44,13 +45,19 @@
 
 .main-form__list {
   list-style: none;
-  margin: auto 0;
+  margin-top: 19px;
+  margin-bottom: 0;
   padding: 0;
 
   ::placeholder {
     color: @color-main;
     // По макету placeholder тоже черного цвета, но как-то это странно. Должно ведь быть визуал.отличие подсказки от заполненной формы
   }
+}
+
+.main-form__section--emotion {
+  margin-top: 13px;
+  margin-bottom: 18px;
 }
 
 .main-form__text-input {
@@ -62,8 +69,7 @@
 .main-form__text-input-with-icon {
   display: flex;
   flex-direction: column;
-
-  padding-bottom: 20px;
+  margin-bottom: 11px;
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
@@ -74,6 +80,7 @@
 .main-form__text-and-icon-wrapper {
   display: flex;
   position: relative;
+  margin-top: 10px;
 
   svg {
     background-color: @background-icon-form;
@@ -87,7 +94,7 @@
   font-size: @font-size-main-text;
   line-height: @line-height-main;
   font-weight: @font-weight-main;
-  padding-right: 20px;
+  padding-right: 16px;
   margin: auto 0;
 
   @media (min-width: @desktop-width) {
@@ -116,7 +123,7 @@
   font-weight: @font-weight-secondary;
 
   background-color: @background-pale-form;
-  padding: 17px 16px;
+  padding: 16px 21px;
 
   &:hover {
     background-color: @background-checkbox-form-hover;
@@ -131,6 +138,8 @@
   padding: 15px 11px 15px 12px;
   background-color: @background-pale-form;
   cursor: pointer;
+  vertical-align: middle;
+  margin-right: 24px;
 
   &:hover {
     background-color: @background-checkbox-form-hover;
@@ -148,9 +157,9 @@
   font-size: @font-size-mobile;
   line-height: @line-height-main;
   text-transform: none;
-  padding: 10px 0;
   display: flex;
   align-items: center;
+  vertical-align: middle;
 }
 
 .main-form__section--contacts .main-form__list {
@@ -226,4 +235,8 @@
   @media (min-width: @tablet-width) {
     order: -1;
   }
+}
+
+.main-form__feedback-status {
+  padding: 20px;
 }
