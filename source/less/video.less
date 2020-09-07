@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 18px 0 29px 0px;
+  margin-bottom: 70px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     max-width: 648px;
@@ -17,6 +18,8 @@
   font-size: @font-size-mobile;
   line-height: @line-height-main;
   font-weight: @font-weight-secondary;
+  margin-top: 20px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -27,22 +30,30 @@
 .video__description {
   line-height: 24px;
   font-size: @font-size-main-text;
-  padding: 0px 20px;
+  padding: 0px 25px;
   margin-bottom: 32px;
 }
 
 .video__player--window {
+  display: block;
   width: 100%;
 }
 
 .video__wrapper {
-  padding: 0 14px;
-  background-color: plum;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -70px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 21px;
 }
+
 .video__controls {
   display: flex;
   justify-content: space-around;
-  padding: 19px 0;
+  padding-top: 22px;
+  padding-bottom: 21px;
 
   @media (max-width: @mobile-width-only) {
     background-color: @background-pale-form;
@@ -106,4 +117,27 @@
   }
 }
 
-// Прописать состояния кнопок в мобильной версии. Пока не разобралась. Цвета прописаны в файле variables
+.video__position {
+  position: relative;
+  padding: 21px 0;
+  background-color: @color-main;
+  opacity: 0.4;
+}
+
+.video__progress-bar {
+  height: 3px;
+  background: @color-main-button;
+  margin: 0 22px;
+}
+
+.video__current-time {
+  position: absolute;
+  top: 18px;
+  left: 57px;
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
