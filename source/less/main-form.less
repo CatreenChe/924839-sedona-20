@@ -34,7 +34,7 @@
 .main-form__title {
   margin: 0 auto;
 
-  padding-top: 22px;
+  padding-top: 23px;
   text-align: center;
 }
 
@@ -53,6 +53,12 @@
     color: @color-main;
     // По макету placeholder тоже черного цвета, но как-то это странно. Должно ведь быть визуал.отличие подсказки от заполненной формы
   }
+}
+
+.main-form__section--person .main-form__list,
+.main-form__section--contacts .main-form__list {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .main-form__section--emotion {
@@ -80,7 +86,7 @@
 .main-form__text-and-icon-wrapper {
   display: flex;
   position: relative;
-  margin-top: 10px;
+  margin-top: 8px;
 
   svg {
     background-color: @background-icon-form;
@@ -139,7 +145,7 @@
   background-color: @background-pale-form;
   cursor: pointer;
   vertical-align: middle;
-  margin-right: 24px;
+  margin-right: 28px;
 
   &:hover {
     background-color: @background-checkbox-form-hover;
@@ -160,6 +166,9 @@
   display: flex;
   align-items: center;
   vertical-align: middle;
+}
+.main-form__checkbox-input {
+  margin: 28px 0 34px;
 }
 
 .main-form__section--contacts .main-form__list {
@@ -186,6 +195,10 @@
   }
 }
 
+.main-form__section--review .main-form__title {
+  padding-top: 15px;
+}
+
 .main-form__reviews {
   font-style: @font-family-main;
   font-size: @font-size-mobile;
@@ -195,7 +208,7 @@
   background-color: @background-pale-form;
   min-height: 160px;
   border: none;
-  padding: 10px 22px;
+  padding: 27px;
 
   width: 100%;
   box-sizing: border-box;
@@ -211,6 +224,8 @@
   border: none;
   padding: 16px 0;
   width: 100%;
+  margin-top: 36px;
+  margin-bottom: 43px;
 }
 
 .main-form__side-note {
